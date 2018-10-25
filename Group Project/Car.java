@@ -15,17 +15,17 @@ public class Car extends Actor
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY()+5);
+        if (Greenfoot.isKeyDown("left")) {
+            move(-10);
         }
-        if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY()-5);
+        if (Greenfoot.isKeyDown("right")) {
+            move(10);
         }
-        if (getY() == 60) {
-            setLocation(getX(), getY()+10);
+        if (getX() == 200) {
+            setLocation(getX() + 10, getY());
         }
-        if (getY() == 330) {
-            setLocation(getX(), getY()-10);
+        if (getX() == 820) {
+            setLocation(getX() - 10, getY());
         }
         Actor obstacle = getOneIntersectingObject(Obstacle.class);
         if (obstacle != null) {

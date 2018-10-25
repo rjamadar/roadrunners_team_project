@@ -14,6 +14,6 @@ public class Line extends Actor
      */
     public void act() 
     {
-        move(-5);
+        setLocation(getX(), getY() + 5);
     }    
 }
